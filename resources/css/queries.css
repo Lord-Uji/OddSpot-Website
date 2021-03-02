@@ -1,0 +1,12 @@
+@media only screen and (max-width: 1200px) {
+  /*----------HERO SECTION-----------*/
+  .hero-text-box {
+    width: 100%;
+    padding: 0 2%;
+  }
+
+  /* We set padding to all rows to keep them visible within the shrinking browser*/
+  .row {
+    padding: 0 2%;
+  }
+}

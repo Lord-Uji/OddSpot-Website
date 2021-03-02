@@ -1,2 +1,1 @@
 # OddSpot-Website
- OddSpot-Website
