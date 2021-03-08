@@ -151,6 +151,19 @@ a:active {
   /* Here, we have formatted Play Store and App Store img links with text-decoration: none, removing odd text glitches near it.*/
 }
 
+/* ------------------------ BUTTONS ----------------------- */
+
+.btn-signup {
+  border: 2px solid #16807785;
+  padding: 7px 0px;
+  border-radius: 8px;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+  border: 2px solid transparent;
+}
+
 /*------------------------------------------------------*/
 /* HEADER*/
 /*------------------------------------------------------*/
@@ -208,14 +221,14 @@ nav {
   transparent, and make a smooth transition to 0.2 like before. */
 .main-nav li a:link,
 .main-nav li a:visited {
-  padding: 6px 0;
+  padding: 8px;
   color: #168077;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 100%;
-  border: 8px solid transparent;
   border: 8px;
+  border-radius: 8px;
   /*-- This extra border call makes it smooth, without it, the inner box, and each border line takes on
   individual gradient*/
   transition: 0.2s;
