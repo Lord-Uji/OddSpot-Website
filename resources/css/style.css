@@ -52,13 +52,12 @@ h1,
 h2,
 h3 {
   font-weight: 400;
-  text-transform: uppercase;
 }
 
 h1 {
   margin-top: 0;
   margin-bottom: 20px;
-  color: rgb(255, 94, 0);
+  color: #ffffff;
   font-size: 240%;
   word-spacing: 4px;
 }
@@ -67,27 +66,18 @@ h2 {
   font-size: 180%;
   word-spacing: 2px;
   text-align: center;
-  margin-bottom: 30px;
-  color: rgb(223, 223, 223);
+  padding-bottom: 20px;
+  font-weight: bold;
+  color: #168077;
 }
 
 h3 {
   font-size: 110%;
-  margin: 15px auto;
   text-align: center;
 }
 
 /* The "h2:after" is for a space literally below, "after", the item in reference.
 Here, were are just putting a small divider line between the header and the paragraph below.*/
-h2:after {
-  display: block;
-  height: 2px;
-  background-color: #e67e22;
-  content: " ";
-  width: 100px;
-  margin: 0 auto;
-  margin-top: 30px;
-}
 
 /*----------------Paragraphs--------------*/
 
@@ -132,7 +122,6 @@ h2:after {
   color: #e67e22;
   text-decoration: none;
   padding-bottom: 1px;
-  border-bottom: 1px solid #e67e22;
   transition: border-bottom 0.2, color 0.2;
   /* We use the div class, then a:link, to specify a group of links, 
     such as the links in our city features section*/
@@ -173,13 +162,14 @@ making sure the image scales appropriately in the page by using
  background-size:cover and background-position:center, eliminating the
  thin margin gap at the top by setting height:100vh, so it is 100% of cx viewport. */
 header {
-  background-image: url(img/studio_hero.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(img/studio_hero2.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   /* As noted by the term 'attachment', this keep the header img in place, 
     and allows other items  "scroll over" it.*/
-  height: 75vh;
+  height: 68vh;
 }
 
 .hero-text-box {
@@ -195,8 +185,8 @@ header {
   height: 50px;
   width: auto;
   position: absolute;
-  top: 10px;
-  left: 3%;
+  top: 20px;
+  left: 2%;
 }
 
 nav {
@@ -244,40 +234,280 @@ nav {
   color: #fff;
 }
 
-/*------------------------------------------------------*/
-/* Section-Signup */
-/*------------------------------------------------------*/
+/*------------------SEARCH BOX---------------*/
 
-.section-signup {
-  background-image: linear-gradient(to left, teal, darkgoldenrod);
+body {
+  background: #f6f6f6;
+}
+p {
+  font-family: "Webly Sleek SemiLight", Helvetica-, droid sans, sans-serif;
+  font-weight: normal;
+  margin: 0 0 1rem;
+}
+.centerbox {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 620px;
+  min-height: 52px;
+  z-index: 2;
+}
+.centerbox h1 {
+  margin-bottom: 45px;
+  font-size: 80px;
+  font-family: "Webly Sleek SemiLight";
+  font-weight: bold;
+  text-align: center;
+  margin-right: 1%;
+  text-shadow: 2px 2px 6px #000000;
+}
+.centerbox p.description {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.description a {
+  text-decoration: none;
+}
+.main-input {
+  background: #fff;
+  height: 50px;
+  width: 327px;
+  color: #a7b1ab;
+  border: 1px solid #cccccc;
+  margin-bottom: 200px;
+  -webkit-appearance: none;
+  border-radius: 4px 0px 0px 4px;
+  -moz-border-radius: 4px 0px 0px 4px;
+  -webkit-border-radius: 4px 0px 0px 4px;
+  display: inline-block;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0px 0px 0px 57px;
+  font-size: 16px;
+  border-right: 0px;
+  background: #ffffff url("http://seodesigns.com/projects/TD/images/search.png")
+    18px 15px no-repeat;
+  background-size: 18px 18px;
+  float: left;
+}
+.main-location {
+  display: none;
+}
+#main-submit {
+  background: #168077;
+  color: #fff;
+  display: inline-block;
+  font-size: 19px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 0px;
+  -webkit-appearance: none;
+  border-radius: 0px 4px 4px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  -webkit-border-radius: 0px 4px 4px 0px;
+  width: 141px;
+  height: 50px;
+  border: 0px;
+  padding-top: 0px;
+  float: left;
+}
+#main-submit:hover {
+  background: #168077;
+  color: #fff !important;
+  -webkit-appearance: none;
+}
+#main-submit-mobile {
+  display: none;
+}
+footer {
+  border-top: 0px;
+}
+.main-btn {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border: 1px solid #cccccc;
+  padding: 0px;
+  position: relative;
+  float: left;
+  border-right: 0px;
+  background: #ffffff
+    url("http://seodesigns.com/projects/TD/images/main-bullet.png") 122px 23px
+    no-repeat;
+  background-size: 6px 6px;
+  cursor: pointer;
+}
+.search-small {
+  font-size: 12px;
+  margin: 0px;
+  color: #9b9b9b;
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  text-align: left;
+}
+.search-large {
+  font-size: 16px;
+  margin: 0px;
+  color: #4a4a4a;
+  position: absolute;
+  top: 19px;
+  left: 16px;
+  display: inline-block;
+  width: 105px;
+  height: 20px;
+  font-weight: 900;
+  text-align: left;
+}
+.main-form-container {
+  height: 50px;
+  position: relative;
+}
+ul.search-description {
+  width: 150px;
+  position: absolute;
+  background: #fff;
+  right: 143px;
+  top: 55px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  padding: 14px 0px;
+  border: 2px solid #e5e5e5;
+  display: none;
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.search-description li {
+  font-size: 16px;
+  color: #4a4a4a;
+  font-weight: 900;
+  padding: 6px 0px;
+  display: block;
+  padding-left: 16px;
+  cursor: pointer;
+}
+.search-description li:hover {
+  background: #f8f8f8;
+}
+
+/*------------------------------------------------------*/
+/* Section-Search */
+/*------------------------------------------------------*/
+/*
+.section-pre {
+  background: teal;
+}
+.section-pre:first-child h2 {
+  margin: 0px;
+  text-align: center;
+  color: #fff;
+}
+*/
+.section-search {
+  /*background: #f9f9fb; */
+
+  /* -- interesting faded overlay style-- */
+
+  background: linear-gradient(to bottom left, teal, darkgoldenrod);
+  background-image: linear-gradient(
+      to bottom left,
+      rgba(25, 146, 100, 0.904),
+      rgba(226, 160, 19, 0.904)
+    ),
+    url(img/camps.jpg);
 }
 
 .plan-box {
-  background-color: white;
-  border-radius: 5px;
-  width: 90%;
-  margin-left: 5%;
-  box-shadow: 1px 4px 4px rgb(58, 58, 58);
+  background-color: rgb(255, 255, 255);
+  /*  -- intersting faded overlay style--
+  background-color: rgba(255, 255, 255, 0.582); */
+  border-radius: 30px;
+  width: 95%;
+  margin-left: 4.5%;
+  box-shadow: 1px 4px 10px rgb(165, 165, 165);
+
   /* First value is for x-axis, second is for y-axis, third is blur, last is the color*/
 }
-/* General values for all the boxes in this row*/
 
+/* General values for all the boxes in this row*/
 .plan-box div {
-  padding: 15px;
-  border-bottom: 1px solid rgb(230, 230, 230);
+  padding-bottom: 1px;
+  padding-left: 9px;
+  padding-right: 9px;
 }
 /* Formatting all the individual divs within each box. For example, we have price, plan features,
-and the sign-up up, as individual divs sections within our "plan boxes". By implementing padding
+and the sign-up up, as individual div sections within our "plan boxes". By implementing padding
 and a 1px solid border, we properly seperate all these div's within the box cleanly.*/
 
-.plan-box div:first-child {
-  background-color: rgb(249, 249, 249);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+.plan-box h3 {
+  font-weight: 1000;
+  text-align: center;
+  color: #168077;
+  margin-bottom: 20px;
 }
 
-/* As stated in the call "last-child", this affects only the last child in the div, which 
-in this case is the div for the sign-up buttons.*/
+.plan-box p {
+  font-weight: 400;
+  font-size: 80%;
+  text-align: center;
+  color: #707070;
+  margin: 0 15px;
+}
+
+.plan-image img {
+  display: block;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding-top: 5px;
+}
+/*Setting up image format for the plan boxes*/
+
+.plan-text {
+  margin: 4px;
+  text-align: center;
+}
+
+.plan-text-btn {
+  font-size: 110%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.plan-text-btn a:link,
+.plan-text-btn a:visited {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 100%;
+  border: 2px solid #16807785;
+  color: #168077;
+  border-radius: 8px;
+  padding: 8px;
+  transition: 0.2s;
+}
+
+.plan-text-btn a:hover,
+.plan-text-btn a:active {
+  background: linear-gradient(to bottom left, teal, darkgoldenrod);
+  border-radius: 8px;
+  padding: 8px;
+  color: #fff;
+}
+
+/*Setting up the link text within the plan boxes*/
 
 .plan-price {
   font-size: 300%;
@@ -294,16 +524,266 @@ in this case is the div for the sign-up buttons.*/
 the font size set in the parent. In this instance, setting font-size to 50% in the child, will equate
 to a relative font-size of 150%, since font-size is set to 300% in the parent*/
 
-.plan-price-month {
-  font-size: 80%;
-}
-
 .plan-box ul {
   list-style: none;
   /* Another reminder, to remove default underlines on links, we use text-decoration-style: none;
   To remove default bullets on unordered lists, we use list-style: none;*/
 }
 
-.plan-box ul li {
-  padding: 5px 0;
+/*------------------------------------------------------*/
+/* Section - Card Showcase*/
+/*------------------------------------------------------*/
+
+.section-cards {
+  padding: 20px 10px;
+}
+/* Remember, sections/etc will have default padding. When wanted, we set padding to 0 to clear this.*/
+
+.cards-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.cards-showcase li {
+  display: block;
+  float: left;
+  width: 20%;
+  padding: 10px;
+  /* Display:block is to make sure they are indeed in blocks, and float is to make sure they show side-by-side.
+  Because there are four list -tems (li) in this un-ordered list class at a width of 100%, 
+  we set each list-item to equal 100%, so in this case, 25% per list item.*/
+}
+
+/*~~~~~~~~~~~~~Showcase item 1~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* This merely formats the "figure" container, and not the photo itself within*/
+.card-photo1 {
+  width: 100%;
+  overflow: hidden;
+  /* Overflow to lock images into container size no matter the zoom via transform:scale(). We select hidden,
+  as there is no need to scroll within this container.*/
+  background-color: black;
+}
+
+/* This brings the actual photo to the proper ratio and size as the container.*/
+.card-photo1 img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+
+  /* This ^^ will zoom out the photo at 115% size. This will cause the image to 'overflow' theri containers,
+  so we will call an overflow in the actual container.*/
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.card-photo1 img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  /* Sets the scale of the image back to normall 100%. */
+}
+
+/*~~~~~~~~~~~~~Showcase item 2~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.card-photo2 {
+  width: 100%;
+  overflow: hidden;
+  /* Overflow to lock images into container size no matter the zoom via transform:scale(). We select hidden,
+  as there is no need to scroll within this container.*/
+  background-color: black;
+}
+
+/* This brings the actual photo to the proper ratio and size as the container.*/
+.card-photo2 img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+
+  /* This ^^ will zoom out the photo at 115% size. This will cause the image to 'overflow' theri containers,
+  so we will call an overflow in the actual container.*/
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.card-photo2 img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  /* Sets the scale of the image back to normall 100%. */
+}
+
+/*~~~~~~~~~~~~~Showcase item 3~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.card-photo3 {
+  width: 100%;
+  overflow: hidden;
+  /* Overflow to lock images into container size no matter the zoom via transform:scale(). We select hidden,
+  as there is no need to scroll within this container.*/
+  background-color: black;
+}
+
+/* This brings the actual photo to the proper ratio and size as the container.*/
+.card-photo3 img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+
+  /* This ^^ will zoom out the photo at 115% size. This will cause the image to 'overflow' theri containers,
+  so we will call an overflow in the actual container.*/
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.card-photo3 img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  /* Sets the scale of the image back to normall 100%. */
+}
+
+/*~~~~~~~~~~~~~Showcase item 4~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.card-photo4 {
+  width: 100%;
+  overflow: hidden;
+  /* Overflow to lock images into container size no matter the zoom via transform:scale(). We select hidden,
+  as there is no need to scroll within this container.*/
+  background-color: black;
+}
+
+/* This brings the actual photo to the proper ratio and size as the container.*/
+.card-photo4 img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+
+  /* This ^^ will zoom out the photo at 115% size. This will cause the image to 'overflow' theri containers,
+  so we will call an overflow in the actual container.*/
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.card-photo4 img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  /* Sets the scale of the image back to normall 100%. */
+}
+
+/*~~~~~~~~~~~~~Showcase item 5~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.card-photo5 {
+  width: 100%;
+  overflow: hidden;
+  /* Overflow to lock images into container size no matter the zoom via transform:scale(). We select hidden,
+  as there is no need to scroll within this container.*/
+  background-color: black;
+}
+
+/* This brings the actual photo to the proper ratio and size as the container.*/
+.card-photo5 img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+
+  /* This ^^ will zoom out the photo at 115% size. This will cause the image to 'overflow' theri containers,
+  so we will call an overflow in the actual container.*/
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.card-photo5 img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  /* Sets the scale of the image back to normall 100%. */
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*We select the 2nd child (2nd img) within the cards-showcase call. ":nth-child()"
+This basically allows us to select the images individually without reformating into individual figures*/
+.cards-showcase img:nth-child(2) {
+  height: 50px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*------------------------------------------------------*/
+/* Footer */
+/*------------------------------------------------------*/
+
+footer {
+  background: #cacaca;
+  padding: 30px;
+  font-size: 90%;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+  font-size: 100%;
+  margin-top: 20px;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  border: 0;
+  text-decoration: none;
+  color: rgb(173, 173, 173);
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: rgb(255, 255, 255);
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 150%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram-outline {
+  transition: color 0.3s;
+}
+
+.ion-social-facebook:hover {
+  color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+  color: #00aced;
+}
+
+.ion-social-googleplus:hover {
+  color: #bb0000;
+}
+
+.ion-social-instagram-outline:hover {
+  color: #517fa4;
 }

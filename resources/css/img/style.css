@@ -1,0 +1,524 @@
+/*------------------------------------------------------*/
+/* BASIC SETUP */
+/*------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Establishing general page font settings.*/
+html {
+  background-color: #fff;
+  color: rgb(26, 162, 241);
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/*------------------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*------------------------------------------------------*/
+
+.row {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 20px 0;
+}
+
+.box {
+  padding: 1%;
+}
+
+/* -------- Headings -------- */
+
+/* This is the hero text itself. Set margin/ font color-size-weight-spacing, etc for the header block.*/
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 240%;
+  word-spacing: 4px;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+  color: #168077;
+}
+
+h3 {
+  font-size: 110%;
+  text-align: center;
+}
+
+/* The "h2:after" is for a space literally below, "after", the item in reference.
+Here, were are just putting a small divider line between the header and the paragraph below.*/
+
+/*----------------Paragraphs--------------*/
+
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+/*----------------Icons--------------*/
+
+.icon-big {
+  font-size: 300%;
+  display: block;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 120%;
+  margin-right: 10px;
+
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -2.5px;
+  /* Aligns the icons with the text, side-by-side. negative margin "takes space away". */
+}
+
+/* -------- Links -------- */
+
+.city-feature a:link,
+.city-feature a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  padding-bottom: 1px;
+  transition: border-bottom 0.2, color 0.2;
+  /* We use the div class, then a:link, to specify a group of links, 
+    such as the links in our city features section*/
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+
+.btn-app:link,
+.btn-app:visited {
+  text-decoration: none;
+
+  /* Here, we have formatted Play Store and App Store img links with text-decoration: none, removing odd text glitches near it.*/
+}
+
+/* ------------------------ BUTTONS ----------------------- */
+
+.btn-signup {
+  border: 2px solid #16807785;
+  padding: 7px 0px;
+  border-radius: 8px;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+  border: 2px solid transparent;
+}
+
+/*------------------------------------------------------*/
+/* HEADER*/
+/*------------------------------------------------------*/
+
+/* Settings for the actual header box. The main background image CX sees, 
+making sure the image scales appropriately in the page by using
+ background-size:cover and background-position:center, eliminating the
+ thin margin gap at the top by setting height:100vh, so it is 100% of cx viewport. */
+header {
+  background-image: url(img/studio_hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* As noted by the term 'attachment', this keep the header img in place, 
+    and allows other items  "scroll over" it.*/
+  height: 71vh;
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+/* Setup up logo height with auto width for scale, and float to the left.*/
+.logo {
+  height: 50px;
+  width: auto;
+  position: absolute;
+  top: 20px;
+  left: 2%;
+}
+
+nav {
+  background: #fff;
+}
+
+/* We push the nav links to the right with float, and align them 
+  with the logo via margin-top.*/
+.main-nav {
+  float: right;
+  list-style: none;
+  margin: 25px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+/* We setup the color, font, remove underline default, and create link hover
+  effects. To prevent odd loading, we create a border around the link items, set to 
+  transparent, and make a smooth transition to 0.2 like before. */
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px;
+  color: #168077;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 100%;
+  border: 8px;
+  border-radius: 8px;
+  /*-- This extra border call makes it smooth, without it, the inner box, and each border line takes on
+  individual gradient*/
+  transition: 0.2s;
+}
+
+/* Here we put the color detail for the hover and active effect*/
+.main-nav li a:hover,
+.main-nav li a:active {
+  background: linear-gradient(to bottom left, teal, darkgoldenrod);
+  border: 8px solid linear-gradient(to bottom left, teal, darkgoldenrod);
+  border-radius: 8px;
+  padding: 8px;
+  color: #fff;
+}
+
+/*------------------SEARCH BOX---------------*/
+
+/*
+body {
+  background: #f6f6f6;
+}
+p {
+  font-family: "Webly Sleek SemiLight", Helvetica-, droid sans, sans-serif;
+  font-weight: normal;
+  margin: 0 0 1rem;
+}
+.centerbox {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); 
+  -webkit-transform: translate(-50%, -50%); 
+  width: 620px;
+  min-height: 52px;
+  z-index: 2;
+}
+.centerbox h1 {
+  margin-bottom: 45px;
+  font-size: 80px;
+  font-family: "Webly Sleek SemiLight";
+  font-weight: bold;
+  text-align: center;
+}
+.centerbox p.description {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.description a {
+  text-decoration: none;
+}
+.main-input {
+  background: #fff;
+  height: 50px;
+  width: 327px;
+  color: #a7b1ab;
+  border: 1px solid #cccccc;
+  margin-bottom: 0px;
+  -webkit-appearance: none;
+  border-radius: 4px 0px 0px 4px;
+  -moz-border-radius: 4px 0px 0px 4px;
+  -webkit-border-radius: 4px 0px 0px 4px;
+  display: inline-block;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0px 0px 0px 57px;
+  font-size: 16px;
+  border-right: 0px;
+  background: #ffffff url("http://seodesigns.com/projects/TD/images/search.png")
+    18px 15px no-repeat;
+  background-size: 18px 18px;
+  float: left;
+}
+.main-location {
+  display: none;
+}
+#main-submit {
+  background: #168077;
+  color: #fff;
+  display: inline-block;
+  font-size: 19px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 0px;
+  -webkit-appearance: none;
+  border-radius: 0px 4px 4px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  -webkit-border-radius: 0px 4px 4px 0px;
+  width: 141px;
+  height: 50px;
+  border: 0px;
+  padding-top: 0px;
+  float: left;
+}
+#main-submit:hover {
+  background: #168077;
+  color: #fff !important;
+  -webkit-appearance: none;
+}
+#main-submit-mobile {
+  display: none;
+}
+footer {
+  border-top: 0px;
+}
+.main-btn {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border: 1px solid #cccccc;
+  padding: 0px;
+  position: relative;
+  float: left;
+  border-right: 0px;
+  background: #ffffff
+    url("http://seodesigns.com/projects/TD/images/main-bullet.png") 122px 23px
+    no-repeat;
+  background-size: 6px 6px;
+  cursor: pointer;
+}
+.search-small {
+  font-size: 12px;
+  margin: 0px;
+  color: #9b9b9b;
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  text-align: left;
+}
+.search-large {
+  font-size: 16px;
+  margin: 0px;
+  color: #4a4a4a;
+  position: absolute;
+  top: 19px;
+  left: 16px;
+  display: inline-block;
+  width: 105px;
+  height: 20px;
+  font-weight: 900;
+  text-align: left;
+}
+.main-form-container {
+  height: 50px;
+  position: relative;
+}
+ul.search-description {
+  width: 150px;
+  position: absolute;
+  background: #fff;
+  right: 143px;
+  top: 55px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  padding: 14px 0px;
+  border: 1px solid #e5e5e5;
+  display: none;
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.search-description li {
+  font-size: 16px;
+  color: #4a4a4a;
+  font-weight: 900;
+  padding: 6px 0px;
+  display: block;
+  padding-left: 16px;
+  cursor: pointer;
+}
+.search-description li:hover {
+  background: #f8f8f8;
+}
+
+*/
+
+/*------------------------------------------------------*/
+/* Section-Signup */
+/*------------------------------------------------------*/
+/*
+.section-pre {
+  background: teal;
+}
+.section-pre:first-child h2 {
+  margin: 0px;
+  text-align: center;
+  color: #fff;
+}
+*/
+.section-signup {
+  /*background: #f9f9fb;*/
+
+  /* -- intersting faded overlay style-- */
+  background: linear-gradient(to bottom left, teal, darkgoldenrod);
+}
+
+.plan-box {
+  background-color: rgb(255, 255, 255);
+  /*  -- intersting faded overlay style--
+  background-color: rgba(255, 255, 255, 0.582);*/
+  border-radius: 30px;
+  width: 95%;
+  margin-left: 4.5%;
+  box-shadow: 1px 4px 10px rgb(165, 165, 165);
+
+  /* First value is for x-axis, second is for y-axis, third is blur, last is the color*/
+}
+
+/* General values for all the boxes in this row*/
+.plan-box div {
+  padding-bottom: 1px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+/* Formatting all the individual divs within each box. For example, we have price, plan features,
+and the sign-up up, as individual div sections within our "plan boxes". By implementing padding
+and a 1px solid border, we properly seperate all these div's within the box cleanly.*/
+
+.plan-box h3 {
+  font-weight: 1000;
+  text-align: center;
+  color: #168077;
+  margin-bottom: 20px;
+}
+
+.plan-box p {
+  font-weight: 400;
+  font-size: 80%;
+  text-align: center;
+  color: #242424;
+  margin: 0 15px;
+}
+
+.plan-image img {
+  display: block;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding-top: 5px;
+}
+/*Setting up image format for the plan boxes*/
+
+.plan-text {
+  margin: 4px;
+  text-align: center;
+}
+
+.plan-text-btn {
+  font-size: 110%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.plan-text-btn a:link,
+.plan-text-btn a:visited {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 100%;
+  border: 2px solid #16807785;
+  color: #168077;
+  border-radius: 8px;
+  padding: 8px;
+  transition: 0.2s;
+}
+
+.plan-text-btn a:hover,
+.plan-text-btn a:active {
+  background: linear-gradient(to bottom left, teal, darkgoldenrod);
+  border-radius: 8px;
+  padding: 8px;
+  color: #fff;
+}
+
+/*Setting up the link text within the plan boxes*/
+
+.plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 300;
+  color: #e67e22;
+}
+
+.plan-price span {
+  font-size: 40%;
+  font-weight: 400;
+}
+/* Since this "span" call is the child of the .plan-price parent, the fontsize is relative to
+the font size set in the parent. In this instance, setting font-size to 50% in the child, will equate
+to a relative font-size of 150%, since font-size is set to 300% in the parent*/
+
+.plan-box ul {
+  list-style: none;
+  /* Another reminder, to remove default underlines on links, we use text-decoration-style: none;
+  To remove default bullets on unordered lists, we use list-style: none;*/
+}
