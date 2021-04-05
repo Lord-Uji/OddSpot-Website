@@ -51,7 +51,10 @@ section {
 /* This is the hero text itself. Set margin/ font color-size-weight-spacing, etc for the header block.*/
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
 }
 
@@ -61,20 +64,53 @@ h1 {
   color: #ffffff;
   font-size: 240%;
   word-spacing: 4px;
+  font-weight: bold;
+  text-align: center;
 }
 
 h2 {
   font-size: 180%;
-  word-spacing: 2px;
+  word-spacing: 15px;
   text-align: center;
   padding-bottom: 20px;
   font-weight: bold;
-  color: #168077;
+  color: rgb(243, 241, 233);
+  text-shadow: 2px 3px 6px #000000b6;
 }
 
 h3 {
-  font-size: 110%;
+  font-size: 100%;
   text-align: center;
+}
+
+h4 {
+  font-size: 150%;
+  word-spacing: 2px;
+  text-align: center;
+  font-weight: bold;
+  color: teal;
+  padding-bottom: 15px;
+}
+
+h5 {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 240%;
+  word-spacing: 4px;
+  font-weight: bold;
+  text-align: center;
+  color: darkgoldenrod;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 100%;
+  text-align: center;
+  color: teal;
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 5px;
+  word-spacing: 2px;
 }
 
 /* The "h2:after" is for a space literally below, "after", the item in reference.
@@ -170,7 +206,7 @@ header {
   background-attachment: fixed;
   /* As noted by the term 'attachment', this keep the header img in place, 
     and allows other items  "scroll over" it.*/
-  height: 68vh;
+  height: 91vh;
 }
 
 .hero-text-box {
@@ -263,7 +299,7 @@ p {
   font-weight: bold;
   text-align: center;
   margin-right: 1%;
-  text-shadow: 2px 2px 6px #000000;
+  text-shadow: 2px 3px 6px #000000;
 }
 .centerbox p.description {
   margin-bottom: 40px;
@@ -421,11 +457,21 @@ ul.search-description {
   padding: 40px;
   background: linear-gradient(to bottom left, teal, darkgoldenrod);
   background-image: linear-gradient(
-      to bottom left,
-      rgba(25, 146, 100, 0.904),
-      rgba(226, 160, 19, 0.904)
+      to bottom,
+      rgba(0, 128, 128, 0.959),
+      rgba(184, 135, 11, 0.87)
     ),
     url(img/camps.jpg);
+  background-size: 60%;
+}
+
+.second-section-text {
+  font-weight: 400;
+  font-size: 100%;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 2px 3px 4px #000000b6;
+  padding-bottom: 30px;
 }
 
 .plan-box {
@@ -453,7 +499,7 @@ and a 1px solid border, we properly seperate all these div's within the box clea
 .plan-box h3 {
   font-weight: 1000;
   text-align: center;
-  color: #168077;
+  color: #474747;
   margin-bottom: 20px;
 }
 
@@ -532,101 +578,73 @@ to a relative font-size of 150%, since font-size is set to 300% in the parent*/
 }
 
 /*------------------------------------------------------*/
-/* Section-Cards */
+/* mission-statement */
 /*------------------------------------------------------*/
 
-.container {
-  display: grid;
-  grid-template-columns: 315px 315px 315px 315px 315px 315px;
-  grid-template-rows: 200px 200px;
-  overflow: hidden;
-  max-width: 99%;
+.mission-statement {
+  padding-top: 40px;
   margin: 0 auto;
-
-  /* In short, the fr value deterimines the "size" or fractional unit.
-  Each individual call of an fr, adds a row or column.
-  */
 }
 
-.item-1 {
-  background: #d81111;
-  grid-row: 1/3;
-  grid-column: 1/2;
-  margin: 10px;
-
-  /*
-  Here, I set the itemn to start on grid line 1, and stop at grid line 6.
-  In regards to the grid, calling "1" doesn't call the first block, but simply
-  starts the items at the first line. Hence, 1/2 means start at line 1
-   (the first line) and stop at line 2. This equates to ONE BLOCK.
-
-   Following this, 1/3 would equate to TWO FULL BLOCKS of the grid.
-  */
+.mission-border {
+  border-bottom: 2px inset rgba(218, 165, 32, 0.548);
+  padding-bottom: 20px;
+  width: 70%;
+  margin: 0 auto;
 }
 
-.item-2 {
-  background: #94e439;
-  grid-row: 1/2;
-  grid-column: 2/3;
-  margin: 10px;
+/*------------------------------------------------------*/
+/* Section - Card Showcase*/
+/*------------------------------------------------------*/
+
+.section-cards {
+  padding: 0;
+  margin: 20px 0px 30px 0px;
+}
+/* Remember, sections/etc will have default padding. When wanted, we set padding to 0 to clear this.*/
+
+.cards-showcase {
+  list-style: none;
+  width: 100%;
 }
 
-.item-3 {
-  background: #2e3892;
-  grid-row: 2/3;
-  grid-column: 2/3;
-  margin: 10px;
+.cards-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+  /* Display:block is to make sure they are indeed in blocks, and float is to make sure they show side-by-side.
+  Because there are four list -tems (li) in this un-ordered list class at a width of 100%, 
+  we set each list-item to equal 100%, so in this case, 25% per list item.*/
 }
 
-.item-4 {
-  background: #c7770f;
-  grid-row: 1/2;
-  grid-column: 3/4;
-  margin: 10px;
+/* This merely formats the "figure" container, and not the photo itself within*/
+.card-photo {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 15px;
+
+  /* Overflow to lock images into container size no matter the zoom via transform:scale(). We select hidden,
+  as there is no need to scroll within this container.*/
 }
 
-.item-5 {
-  background: #7000bb;
-  grid-row: 2/3;
-  grid-column: 3/4;
-  margin: 10px;
+/* This brings the actual photo to the proper ratio and size as the container.*/
+.card-photo img {
+  opacity: 0.9;
+  width: 100%;
+  height: auto;
+  /* This ^^ will zoom out the photo at 115% size. This will cause the image to 'overflow' theri containers,
+  so we will call an overflow in the actual container.*/
+  transition: filter 0.5s;
+  border-radius: 15px;
+  filter: brightness(70%);
 }
 
-.item-6 {
-  background: #f7f319;
-  grid-row: 1/3;
-  grid-column: 4/5;
-  margin: 10px;
+.card-photo img:hover {
+  filter: brightness(50%);
+  /* Sets the scale of the image back to normall 100%. */
 }
 
-.item-7 {
-  background: #375c0d;
-  grid-row: 1/2;
-  grid-column: 5/6;
-  margin: 10px;
-}
-
-.item-8 {
-  background: #6c79f1;
-  grid-row: 2/3;
-  grid-column: 5/6;
-  margin: 10px;
-}
-
-.item-9 {
-  background: #0fffd7;
-  grid-row: 1/2;
-  grid-column: 6/7;
-  margin: 10px;
-}
-
-.item-10 {
-  background: #ee05db;
-  grid-row: 2/3;
-  grid-column: 6/7;
-  margin: 10px;
-}
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*------------------------------------------------------*/
 /* Footer */
 /*------------------------------------------------------*/
