@@ -630,7 +630,7 @@ to a relative font-size of 150%, since font-size is set to 300% in the parent*/
   margin-bottom: 16px;
   font-weight: 600;
   font-size: 130%;
-  color: #000000;
+  color: #252525;
 }
 
 .split-left {
@@ -760,6 +760,7 @@ to a relative font-size of 150%, since font-size is set to 300% in the parent*/
   font-size: 80%;
   font-weight: normal;
   color: #000000;
+  text-align: center;
 }
 
 /* pagination bullet settings*/
@@ -771,12 +772,21 @@ to a relative font-size of 150%, since font-size is set to 300% in the parent*/
   margin: 0px 6px;
 }
 
-.swiper-pagination > .swiper-pagination-bullet-active {
-  background-color: white;
+.swiper-pagination1 > .swiper-pagination-bullet-active {
+  background-color: #168077;
+}
+
+.swiper-pagination2 > .swiper-pagination-bullet-active {
+  background-color: goldenrod;
 }
 
 .swiper-pagination {
   width: 100%;
+}
+
+div.swiper-button-prev,
+div.swiper-button-next {
+  color: gray;
 }
 
 /*------------------------------------------------------*/
