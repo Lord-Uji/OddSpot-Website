@@ -10,3 +10,17 @@
     padding: 0 2%;
   }
 }
+@media (min-width: 960px) {
+  .swipe-box-1-form {
+    margin: 16px 0px;
+  }
+
+  .split-left {
+    max-width: 50%;
+    text-align: center;
+  }
+
+  .split-left-bulk {
+    flex-grow: 1;
+  }
+}
