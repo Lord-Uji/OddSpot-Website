@@ -612,7 +612,7 @@ to a relative font-size of 150%, since font-size is set to 300% in the parent*/
 }
 
 /*------------------------------------------------------*/
-/* Split Section */
+/* Swiper Split Section */
 /*------------------------------------------------------*/
 
 .section-split {
@@ -790,7 +790,70 @@ div.swiper-button-next {
 }
 
 /*------------------------------------------------------*/
-/* Section - Card Showcase */
+/* Section - Mobile App Showcase */
+/*------------------------------------------------------*/
+
+.section-steps {
+  background: linear-gradient(to top, teal, darkgoldenrod);
+}
+
+.header1 h2 {
+  margin: 40px auto;
+  word-spacing: 1px;
+}
+
+/* Will select the first of the steps boxes in cascading order*/
+.steps-box1 {
+  text-align: right;
+  padding-right: 1%;
+  margin-top: 1px;
+}
+
+.steps-box2 {
+  padding-right: 20%;
+  float: right;
+  margin-top: 5%;
+}
+
+.app-screen {
+  width: 250px;
+}
+
+.works-step {
+  margin-bottom: 50px;
+  box-shadow: 2px 3px 4px #5a5a5ab6;
+}
+
+/* Last-of-type affects the last of anything within works-step, which in this case, are the btn types.*/
+.works-step:last-of-type {
+  margin-bottom: 40px;
+}
+
+.works-step {
+  border-radius: 25px;
+  margin: auto;
+  width: 95%;
+}
+
+.works-step p {
+  color: teal;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  padding: 15px;
+  font-weight: normal;
+}
+
+.btn-app {
+  padding-left: 50px;
+}
+
+.btn-app img {
+  height: 40px;
+  width: auto;
+}
+
+/*------------------------------------------------------*/
+/* Section - Articles Showcase */
 /*------------------------------------------------------*/
 
 .section-cards {
