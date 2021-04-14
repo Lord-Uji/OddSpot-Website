@@ -921,22 +921,25 @@ div.swiper-button-next {
 /*------------------------------------------------------*/
 
 footer {
+  padding-top: 40px;
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
   position: relative;
   height: auto;
-  background-color: #e2e2e2;
+  background: rgb(255, 255, 255);
+  background-size: contain;
 }
 
 .foot-nav {
   height: auto;
   box-sizing: border-box;
+  padding-bottom: 30px;
 }
 
 .foot-nav h1 {
   font-size: 20px;
   line-height: 17px;
-  color: rgba(34, 34, 34, 0.2);
+  color: rgba(34, 34, 34, 0.815);
   font-weight: bold;
   letter-spacing: 0.25em;
   text-align: center;
@@ -950,6 +953,7 @@ footer {
   font-size: 14px;
   font-family: inherit;
   font-weight: bold;
+  line-height: 2;
   cursor: pointer;
   transition: 0.2s;
   -webkit-transition: 0.2s;
@@ -959,66 +963,46 @@ footer {
 
 .foot-nav ul li:hover {
   color: teal;
-  transition: 0.1s;
-  -webkit-transition: 0.1s;
-  -moz-transition: 0.1s;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
 }
 
-/*
-footer {
-  background: #cacaca;
-  padding: 30px;
-  font-size: 90%;
-}
-
-footer p {
-  color: #888;
+.footer-bottom {
   text-align: center;
-  font-size: 100%;
-  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
+.footer-bottom:before {
+  content: " ";
+  position: absolute;
+  top: 85.8%;
+  border-bottom: 2px solid rgb(173, 173, 173);
+  width: 25%;
+}
 
-
-
-.footer-nav {
+.social-links {
   list-style: none;
-  float: left;
+  display: inline-block;
 }
 
-.footer-nav li,
+.social-links ul {
+  margin: 0 auto;
+}
+
 .social-links li {
-  margin-right: 20px;
+  display: inline-block;
+  padding: 10px 25px;
 }
 
-.footer-nav li a:link,
-.footer-nav li a:visited,
 .social-links li a:link,
 .social-links li a:visited {
+  font-size: 150%;
   border: 0;
   text-decoration: none;
   color: rgb(173, 173, 173);
   transition: color 0.2s;
 }
-
-.footer-nav li a:hover,
-.footer-nav li a:active {
-  color: rgb(255, 255, 255);
-}
-
-
-.social-links li a:link,
-.social-links li a:visited {
-  font-size: 150%;
-
-
-
-.social-links {
-  list-style: none;
-  float: right;
-}
-
-*/
 
 .ion-social-facebook,
 .ion-social-twitter,
