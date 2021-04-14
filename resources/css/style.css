@@ -480,11 +480,15 @@ ul.search-description {
   /*  -- intersting faded overlay style--
   background-color: rgba(255, 255, 255, 0.582); */
   border-radius: 30px;
-  width: 95%;
+  width: 85%;
   margin-left: 4.5%;
   box-shadow: 1px 4px 10px rgb(165, 165, 165);
 
   /* First value is for x-axis, second is for y-axis, third is blur, last is the color*/
+}
+
+.col .plan-box {
+  margin-left: 0.5%;
 }
 
 /* General values for all the boxes in this row*/
@@ -555,19 +559,6 @@ and a 1px solid border, we properly seperate all these div's within the box clea
   color: #fff;
 }
 
-/*Setting up the link text within the plan boxes*/
-
-.plan-price {
-  font-size: 300%;
-  margin-bottom: 10px;
-  font-weight: 300;
-  color: #e67e22;
-}
-
-.plan-price span {
-  font-size: 40%;
-  font-weight: 400;
-}
 /* Since this "span" call is the child of the .plan-price parent, the fontsize is relative to
 the font size set in the parent. In this instance, setting font-size to 50% in the child, will equate
 to a relative font-size of 150%, since font-size is set to 300% in the parent*/
@@ -823,7 +814,7 @@ div.swiper-button-next {
 
 .header1 h2 {
   margin: 40px auto;
-  word-spacing: 1px;
+  word-spacing: 3px;
 }
 
 /* Will select the first of the steps boxes in cascading order*/
@@ -831,18 +822,20 @@ div.swiper-button-next {
   text-align: right;
   padding-right: 7%;
   margin-top: 1px;
+  padding-bottom: 20px;
 }
 
 .steps-box2 {
   padding-right: 20%;
   float: right;
   margin-top: 5%;
+  padding-bottom: 20px;
 }
 
 .app-screen {
   width: 250px;
   box-shadow: 4px 3px 6px #313131b6;
-  border-radius: 45px;
+  border-radius: 39px;
 }
 
 .works-step {
@@ -860,12 +853,13 @@ div.swiper-button-next {
 
 .works-step p {
   background: rgb(241, 241, 241);
-  color: rgb(3, 107, 107);
+  color: teal;
   border-radius: 15px;
   padding: 20px;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 90%;
   text-align: center;
+  font-family: "Lato", sans-serif;
 }
 
 .btn-app {
@@ -987,13 +981,15 @@ footer {
   padding-bottom: 20px;
 }
 
+/*
 .footer-bottom:before {
   content: " ";
   position: absolute;
-  top: 85.8%;
-  border-bottom: 2px solid rgb(173, 173, 173);
+  top: 83.8%;
+  border-bottom: 3px solid rgb(173, 173, 173);
   width: 25%;
 }
+*/
 
 .social-links {
   list-style: none;
@@ -1006,7 +1002,7 @@ footer {
 
 .social-links li {
   display: inline-block;
-  padding: 10px 25px;
+  padding: 10px 10px 30px 10px;
 }
 
 .social-links li a:link,

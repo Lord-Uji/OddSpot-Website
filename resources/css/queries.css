@@ -20,6 +20,13 @@
     padding: 0 2%;
   }
 
+  .plan-box {
+    width: 100%;
+    margin-left: 0%;
+    /* ^^ Since we had a margin-left of 5%, we need to remove that so the margin closes-in
+    normally when the browser is shrunk.*/
+  }
+
   .plan-text-btn {
     font-size: 75%;
   }
@@ -38,6 +45,13 @@
 
   .centerbox {
     margin-left: 3%;
+  }
+
+  .plan-box {
+    width: 100%;
+    margin-left: 0%;
+    /* ^^ Since we had a margin-left of 5%, we need to remove that so the margin closes-in
+    normally when the browser is shrunk.*/
   }
 }
 
@@ -102,7 +116,7 @@
   }
 
   .app-screen {
-    width: 70%;
+    width: 250px;
   }
 
   /*----------CITIES SECTION-----------*/
@@ -121,15 +135,6 @@
     /* ^^ Since we had a margin-left of 5%, we need to remove that so the margin closes-in
     normally when the browser is shrunk.*/
   }
-  .plan-price {
-    font-size: 250%;
-  }
-
-  /*----------CONTACT FORM SECTION-----------*/
-  .contact-form {
-    width: 80%;
-  }
-  /* Here we widen contact form to cover more of the leftover space after shrinking.*/
 }
 
 @media only screen and (max-width: 930px) {
@@ -147,7 +152,7 @@
 
   .steps-box2 {
     padding-right: 15%;
-    margin-top: 1%;
+    margin-top: 5%;
   }
 
   /*----------SEARCH BAR SECTION-----------*/
@@ -189,14 +194,13 @@
   }
 
   .app-screen {
-    width: 70%;
+    width: 250px;
   }
 }
 
 @media only screen and (max-width: 820px) {
   .main-nav li {
     font-size: 90%;
-    
   }
 
   /*----------SEARCH BAR SECTION-----------*/
@@ -344,20 +348,54 @@ For small phones to small tablets, 481px - 767px.*/
     margin-left: 12%;
   }
 
+  /*----------CATEGORY SECTION-----------*/
+
+  .plan-boxes {
+    width: 50%;
+    padding: 10px;
+  }
+
+  .plan-boxes h3 {
+    font-size: 110%;
+    margin-bottom: 4%;
+  }
+
+  .plan-text-btn {
+    font-size: 100%;
+    margin-top: 12%;
+  }
+
   /*----------FEATURES SECTION-----------*/
   .long-copy {
     width: 100%;
     margin-left: 0%;
   }
 
-  /*----------STEPS SECTION-----------*/
+  /*----------MOBILE SHOWCASE SECTION-----------*/
+
+  .header1 h2 {
+    margin: 20px auto;
+    word-spacing: 3px;
+  }
+
   .app-screen {
-    width: 40%;
+    width: 220px;
+    border-radius: 34px;
   }
-  .steps-box:first-child {
-    text-align: center;
-    padding-right: 0%;
+
+  .steps-box1 {
+    text-align: left;
+    padding-right: 0;
+    margin-top: 0;
+    width: 50%;
   }
+
+  .steps-box2 {
+    padding-right: 0;
+    margin-top: 5%;
+    width: 50%;
+  }
+
   .works-step {
     margin-bottom: 20px;
   }
@@ -398,11 +436,16 @@ For small phones to small tablets, 481px - 767px.*/
     padding: 12px;
   }
 
-  /*----------SIGN UP SECTION-----------*/
-  .plan-box {
-    display: grid;
-    margin: 1.5% 1%;
+  .foot-nav {
     width: 50%;
+  }
+
+  .foot-nav h1 {
+    font-size: 95%;
+  }
+
+  .foot-nav ul li {
+    font-size: 80%;
   }
 }
 
@@ -457,14 +500,13 @@ For small phones to small tablets, 481px - 767px.*/
 @media only screen and (max-width: 550px) {
   /*----------SEARCH BAR SECTION-----------*/
   .centerbox {
-    margin-left: 30%
+    margin-left: 30%;
   }
 
   .centerbox h1 {
     font-size: 50px;
     margin-right: 26%;
   }
-
 
   .main-input {
     width: 220px;
@@ -477,61 +519,58 @@ For small phones to small tablets, 481px - 767px.*/
   #main-submit {
     width: 110px;
   }
- 
 }
 
-  @media only screen and (max-width: 507px) {
-    h1 {
-      font-size: 180%;
-    }
-
-    .centerbox {
-      margin-left: 40%
-    }
-  
-    .centerbox h1 {
-      font-size: 45px;
-      margin-right: 39%;
-    }
-  
-  
-    .main-input {
-      width: 180px;
-    }
-  
-    .main-btn {
-      width: 100px;
-    }
-  
-    #main-submit {
-      width: 100px;
-    }
-
-    .mission-statement h4 {
-      font-size: 170%;
-    }
-
-    .mission-statement p {
-      font-size: 90%;
-    }
+@media only screen and (max-width: 507px) {
+  h1 {
+    font-size: 180%;
   }
 
-  /*These rules will apply when the width of the device 
-or browser is less than or equal to 480px. For small phones.*/
-  @media only screen and (max-width: 480px) {
-    section {
-      padding: 25px 0;
-    }
-    .contact-form {
-      width: 100%;
-    }
+  .centerbox {
+    margin-left: 40%;
+  }
 
-    .mission-statement h4 {
-      font-size: 140%;
-    }
-    .mission-statement p {
-      font-size: 80%;
-      margin: 0 auto;
-    }
+  .centerbox h1 {
+    font-size: 45px;
+    margin-right: 39%;
+  }
+
+  .main-input {
+    width: 180px;
+  }
+
+  .main-btn {
+    width: 100px;
+  }
+
+  #main-submit {
+    width: 100px;
+  }
+
+  .mission-statement h4 {
+    font-size: 170%;
+  }
+
+  .mission-statement p {
+    font-size: 90%;
+  }
+}
+
+/*These rules will apply when the width of the device 
+or browser is less than or equal to 480px. For small phones.*/
+@media only screen and (max-width: 480px) {
+  section {
+    padding: 25px 0;
+  }
+  .contact-form {
+    width: 100%;
+  }
+
+  .mission-statement h4 {
+    font-size: 140%;
+  }
+  .mission-statement p {
+    font-size: 80%;
+    margin: 0 auto;
   }
 }
