@@ -21,8 +21,7 @@
   }
 
   .plan-text-btn {
-    font-size: 80%;
-    width: 80%;
+    font-size: 75%;
   }
 }
 
@@ -33,6 +32,12 @@
   }
   .city-feature {
     font-size: 90%;
+  }
+
+  /*----------SEARCH BAR SECTION-----------*/
+
+  .centerbox {
+    margin-left: 3%;
   }
 }
 
@@ -57,6 +62,18 @@
 
   .main-nav li {
     font-size: 95%;
+  }
+
+  .logo {
+    width: auto;
+    top: 17px;
+    left: 2%;
+  }
+
+  /*----------SEARCH BAR SECTION-----------*/
+
+  .centerbox {
+    margin-left: 3%;
   }
 
   /*----------FEATURES SECTION-----------*/
@@ -114,6 +131,14 @@
   /* Here we widen contact form to cover more of the leftover space after shrinking.*/
 }
 
+@media only screen and (max-width: 930px) {
+  /*----------SEARCH BAR SECTION-----------*/
+
+  .centerbox {
+    margin-left: 3%;
+  }
+}
+
 @media only screen and (max-width: 912px) {
   .works-step {
     margin-bottom: 0;
@@ -123,11 +148,34 @@
     padding-right: 15%;
     margin-top: 1%;
   }
+
+  /*----------SEARCH BAR SECTION-----------*/
+
+  .centerbox {
+    margin-left: 3%;
+  }
 }
 
 /*-----------------------------------------*/
 /*---------CITIES SECTION TWEAKS-----------*/
 @media only screen and (max-width: 888px) {
+  .row {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: auto;
+    top: 15px;
+    left: 2%;
+  }
+
+  /*----------SEARCH BAR SECTION-----------*/
+
+  .centerbox {
+    margin-left: 7%;
+  }
+
   .icon-small {
     width: 17px;
   }
@@ -136,24 +184,22 @@
   }
 
   .main-nav li {
-    font-size: 75%;
+    font-size: 80%;
   }
 
   .app-screen {
     width: 70%;
-  }
-
-  .grid {
-    grid-template-columns: 20% auto;
-    grid-template-areas:
-      "apartments" "mix"
-      "homes" "property";
   }
 }
 
 @media only screen and (max-width: 820px) {
   .main-nav li {
     font-size: 70%;
+  }
+
+  /*----------SEARCH BAR SECTION-----------*/
+  .centerbox {
+    margin-left: 9%;
   }
 }
 
@@ -164,6 +210,11 @@
   .city-feature {
     font-size: 80%;
   }
+
+  /*----------SEARCH BAR SECTION-----------*/
+  .centerbox {
+    margin-left: 9%;
+  }
 }
 
 @media only screen and (max-width: 785px) {
@@ -172,6 +223,11 @@
   }
   .city-feature {
     font-size: 80%;
+  }
+
+  /*----------SEARCH BAR SECTION-----------*/
+  .centerbox {
+    margin-left: 10%;
   }
 }
 /*-----------------------------------------*/
@@ -206,6 +262,15 @@ For small phones to small tablets, 481px - 767px.*/
   }
 
   /*----------NAVIGATION-----------*/
+
+  .logo {
+    background-color: #ffffff;
+    border-radius: 21px;
+    border: 4px solid rgb(255, 255, 255);
+    margin: 1px;
+    height: 60px;
+    box-shadow: 2px 4px 6px rgba(73, 73, 73, 0.425);
+  }
 
   /*--HAMBURGER ICON--*/
   .mobile-nav-icon {
@@ -272,6 +337,11 @@ For small phones to small tablets, 481px - 767px.*/
     transition: 0.3s;
   }
 
+  /*----------SEARCH BAR SECTION-----------*/
+  .centerbox {
+    margin-left: 12%;
+  }
+
   /*----------FEATURES SECTION-----------*/
   .long-copy {
     width: 100%;
@@ -299,32 +369,167 @@ For small phones to small tablets, 481px - 767px.*/
     margin-right: 15px;
   }
 
-  /*---------CITIES SECTION TWEAKS-----------*/
-  .icon-small {
-    width: 18px;
+  /*---------MISSION BANNER SECTION-----------*/
+
+  .mission-statement {
+    padding-top: 30px;
   }
-  .city-feature {
-    font-size: 100%;
+
+  .mission-statement h4 {
+    width: 90%;
+    margin: 0 auto;
   }
+
+  /*---------SWIPER SECTION-----------*/
+
+  .split {
+    flex-direction: column;
+    width: 100%;
+  }
+  .split-left {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .split-right {
+    width: 100%;
+    padding: 12px;
+  }
+
   /*----------SIGN UP SECTION-----------*/
   .plan-box {
-    margin-top: 1.5%;
+    display: grid;
+    margin: 1.5% 1%;
+    width: 50%;
   }
 }
 
-@media only screen and (max-width: 507px) {
-  h1 {
-    font-size: 180%;
+@media only screen and (max-width: 700px) {
+  /*----------SEARCH BAR SECTION-----------*/
+  .centerbox {
+    margin-left: 20%;
+  }
+
+  .main-input {
+    width: 280px;
+  }
+
+  .main-btn {
+    width: 120px;
+  }
+
+  #main-submit {
+    width: 120px;
+  }
+
+  .centerbox h1 {
+    font-size: 70px;
+    margin-right: 18%;
   }
 }
 
-/*These rules will apply when the width of the device 
+@media only screen and (max-width: 630px) {
+  /*----------SEARCH BAR SECTION-----------*/
+  .centerbox {
+    margin-left: 25%;
+  }
+
+  .centerbox h1 {
+    font-size: 60px;
+    margin-right: 20%;
+  }
+
+  .main-input {
+    width: 240px;
+  }
+
+  .main-btn {
+    width: 120px;
+  }
+
+  #main-submit {
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  /*----------SEARCH BAR SECTION-----------*/
+  .centerbox {
+    margin-left: 30%
+  }
+
+  .centerbox h1 {
+    font-size: 50px;
+    margin-right: 26%;
+  }
+
+
+  .main-input {
+    width: 220px;
+  }
+
+  .main-btn {
+    width: 110px;
+  }
+
+  #main-submit {
+    width: 110px;
+  }
+ 
+}
+
+  @media only screen and (max-width: 507px) {
+    h1 {
+      font-size: 180%;
+    }
+
+    .centerbox {
+      margin-left: 40%
+    }
+  
+    .centerbox h1 {
+      font-size: 45px;
+      margin-right: 39%;
+    }
+  
+  
+    .main-input {
+      width: 180px;
+    }
+  
+    .main-btn {
+      width: 100px;
+    }
+  
+    #main-submit {
+      width: 100px;
+    }
+
+    .mission-statement h4 {
+      font-size: 170%;
+    }
+
+    .mission-statement p {
+      font-size: 90%;
+    }
+  }
+
+  /*These rules will apply when the width of the device 
 or browser is less than or equal to 480px. For small phones.*/
-@media only screen and (max-width: 480px) {
-  section {
-    padding: 25px 0;
-  }
-  .contact-form {
-    width: 100%;
+  @media only screen and (max-width: 480px) {
+    section {
+      padding: 25px 0;
+    }
+    .contact-form {
+      width: 100%;
+    }
+
+    .mission-statement h4 {
+      font-size: 140%;
+    }
+    .mission-statement p {
+      font-size: 80%;
+      margin: 0 auto;
+    }
   }
 }
