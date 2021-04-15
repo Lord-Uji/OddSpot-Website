@@ -269,6 +269,7 @@ For small phones to small tablets, 481px - 767px.*/
 
   /*----------NAVIGATION-----------*/
 
+  /*
   .logo {
     background-color: #ffffff;
     border-radius: 10px;
@@ -277,21 +278,29 @@ For small phones to small tablets, 481px - 767px.*/
     height: 60px;
     box-shadow: 2px 4px 6px rgba(73, 73, 73, 0.425);
   }
+  */
 
   /*--HAMBURGER ICON--*/
   .mobile-nav-icon {
     display: inline-block;
+    margin-top: 6px;
+    margin-right: 5px;
+    margin-left: 0;
+    color: goldenrod;
   }
 
   .sticky .mobile-nav-icon {
-    margin-top: 7px;
-    margin-right: 10px;
+    
+    margin-top: 6px;
+    margin-right: 5px;
     margin-left: 0;
+    color: whitesmoke;
   }
 
+  /*----------NON-STICKY NAVIGATION-----------*/
   .main-nav {
     float: right;
-    margin-top: 40px;
+    margin-top: 10px;
     margin-left: 0;
     display: none;
   }
@@ -306,41 +315,82 @@ For small phones to small tablets, 481px - 767px.*/
     margin-left: 0;
     margin-top: 10px;
     border: 0;
-    padding: 6px 0;
+    padding: 0;
   }
 
+  
+
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    padding: 2px 0;
+    color: #168077;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 100%;
+    border: 8px;
+    border-radius: none;
+    /*-- This extra border call makes it smooth, without it, the inner box, and each border line takes on
+    individual gradient*/
+    transition: 0.2s;
+  }
+  
+  /* Here we put the color detail for the hover and active effect*/
   .main-nav li a:hover,
-  .main-nav li a:active,
-  .mobile-nav-icon i:hover,
-  .mobile-nav-icon i:active {
-    color: #e67e22;
-    transition: 0.3s;
+  .main-nav li a:active {
+    background: none;
+    color: goldenrod;
   }
 
-  .sticky .main-nav {
+  /*----------STICKY NAVIGATION-----------*/
+  
+  .sticky .main-nav{
     margin-top: 10px;
-    margin-left: 0;
-    float: right;
   }
 
-  .sticky .main-nav li:link,
-  .sticky .main-nav li:visited {
-    border: 2px solid #ffffff;
-  }
-
+  
   .sticky .main-nav li a:link,
   .sticky .main-nav li a:visited {
-    padding: 4px 0;
-    border: 0;
-    margin-top: 5px;
+    padding: 2px 0;
+    margin-left: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 100%;
+    border: 8px;
+    border-radius: none;
+    /*-- This extra border call makes it smooth, without it, the inner box, and each border line takes on
+    individual gradient*/
+    transition: 0.2s;
   }
 
+  
   .sticky .main-nav li a:hover,
   .sticky .main-nav li a:active,
   .sticky .mobile-nav-icon i:hover,
   .sticky .mobile-nav-icon i:active {
-    color: #77400ff8;
+    background: none;
+    color: #aeaeaef8;
     transition: 0.3s;
+  }
+
+  .btn-signup {
+    border: none;
+    padding: 0px 0px;
+    border-radius: none;
+  }
+
+  .btn-signup:hover,
+  .btn-signup:active {
+    border: none;
+  }
+
+  /*----------STICKY LOGO-----------*/
+
+  .sticky .logo-text {
+    position: absolute;
+    left: 2%;
+    margin-top: 0.4%;
   }
 
   /*----------SEARCH BAR SECTION-----------*/
@@ -471,7 +521,9 @@ For small phones to small tablets, 481px - 767px.*/
     font-size: 70px;
     margin-right: 18%;
   }
-}
+
+
+
 
 @media only screen and (max-width: 630px) {
   /*----------SEARCH BAR SECTION-----------*/

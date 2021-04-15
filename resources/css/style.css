@@ -118,12 +118,6 @@ Here, were are just putting a small divider line between the header and the para
 
 /*----------------Paragraphs--------------*/
 
-.long-copy {
-  line-height: 145%;
-  width: 70%;
-  margin-left: 15%;
-}
-
 .box p {
   font-size: 90%;
   line-height: 145%;
@@ -269,6 +263,157 @@ nav {
   border-radius: 8px;
   padding: 8px;
   color: #fff;
+}
+
+/*-----------------STICKY NAV-------------------- */
+
+.sticky {
+  position: fixed;
+  /* Always stays at same point, irrespective of scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #168077fa;
+  box-shadow: 0 2px 3px #0f5c56;
+  z-index: 9999;
+  /*^^ Defines vertical stacking. makes sure sticky nav is always on-top*/
+}
+
+.sticky .main-nav {
+  margin: 25px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  padding: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 100%;
+  border: 8px;
+  border-radius: 8px;
+  /*-- This extra border call makes it smooth, without it, the inner box, and each border line takes on
+  individual gradient*/
+  transition: 0.2s;
+  color: #fff;
+}
+
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active {
+  background: linear-gradient(
+    to bottom left,
+    rgb(255, 255, 255),
+    rgb(255, 255, 255)
+  );
+  border: 8px solid
+    linear-gradient(to bottom left, rgb(255, 255, 255), rgb(255, 255, 255));
+  border-radius: 8px;
+  color: teal;
+}
+
+/*--Mobile Navi---*/
+.mobile-nav-icon {
+  float: right;
+  padding-top: 15px;
+  margin: auto 0;
+  padding-bottom: 15px;
+  padding-right: 10px;
+  text-align: center;
+  display: none;
+  color: rgb(4, 70, 70);
+}
+
+.mobile-nav-icon i {
+  font-size: 250%;
+}
+
+.logo-text {
+  display: none;
+  height: 50px;
+  width: auto;
+  position: absolute;
+  top: 15px;
+  left: 2%;
+}
+
+.sticky .logo-text {
+  display: block;
+}
+.sticky .logo {
+  display: none;
+}
+
+/* Wobble animation for .logo-text in the sticky bar*/
+@-webkit-keyframes wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.logo {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /*------------------SEARCH BOX---------------*/
