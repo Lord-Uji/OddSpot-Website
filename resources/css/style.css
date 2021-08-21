@@ -70,7 +70,7 @@ h1 {
 
 h2 {
   font-size: 180%;
-  word-spacing: 15px;
+  word-spacing: 5px;
   text-align: center;
   padding-bottom: 20px;
   font-weight: bold;
@@ -252,7 +252,7 @@ nav {
   border-radius: 8px;
   /*-- This extra border call makes it smooth, without it, the inner box, and each border line takes on
   individual gradient*/
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 /* Here we put the color detail for the hover and active effect*/
@@ -294,7 +294,7 @@ nav {
   border-radius: 8px;
   /*-- This extra border call makes it smooth, without it, the inner box, and each border line takes on
   individual gradient*/
-  transition: 0.2s;
+  transition: 0.3s;
   color: #fff;
 }
 
