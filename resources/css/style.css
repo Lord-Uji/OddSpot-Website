@@ -699,6 +699,7 @@ and a 1px solid border, we properly seperate all these div's within the box clea
 .plan-text-btn a:hover,
 .plan-text-btn a:active {
   background: linear-gradient(to bottom left, teal, darkgoldenrod);
+
   border-radius: 8px;
   padding: 8px;
   color: #fff;
